@@ -2419,4 +2419,51 @@ body {
         bottom: 20px;
         max-width: none;
     }
+}/* ==============================
+   MOBILE HEADER FIX
+============================== */
+
+@media (max-width: 768px) {
+
+    .header {
+        width: 100%;
+        max-width: 100%;
+        padding: 12px 10px;
+        overflow: hidden;
+    }
+
+    .navbar {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 8px 14px;
+        padding: 0;
+    }
+
+    .navbar a {
+        font-size: 13px;
+        line-height: 1.2;
+        white-space: nowrap;
+    }
+
+    .header-phones {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .header-phones .call-btn {
+        font-size: 12px;
+        padding: 8px 10px;
+        min-width: 0;
+        white-space: nowrap;
+    }
+
 }
