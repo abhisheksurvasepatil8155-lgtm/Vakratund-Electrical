@@ -11,7 +11,10 @@ import {
 } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
 
 
-// Firebase
+// =========================
+// FIREBASE
+// =========================
+
 const firebaseConfig = {
     apiKey: "AIzaSyCarRfxysCE13BaZVmA5huwExoD7WUHDOQ",
     authDomain: "vakratund-electical.firebaseapp.com",
@@ -23,6 +26,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+
 const db = getFirestore(app);
 
 console.log("Firebase connected");
@@ -55,7 +59,7 @@ if (bookingForm) {
         const electricianNumber = "917559110974";
 
         const message =
-            `⚡ New Electrician Booking
+`⚡ New Electrician Booking
 
 Name: ${name}
 Mobile: ${phone}
@@ -78,7 +82,7 @@ Please contact the customer.`;
 
 
 // =========================
-// REVIEW SYSTEM
+// REVIEW ELEMENTS
 // =========================
 
 const reviewButton =
@@ -91,7 +95,9 @@ const reviewMessage =
     document.getElementById("review-message");
 
 
-// Submit Review
+// =========================
+// SUBMIT REVIEW
+// =========================
 
 if (reviewButton) {
 
@@ -103,11 +109,15 @@ if (reviewButton) {
             document.getElementById("review-name").value.trim();
 
         const rating =
-            Number(document.getElementById("review-rating").value);
+            Number(
+                document.getElementById("review-rating").value
+            );
 
         const review =
             document.getElementById("review-text").value.trim();
 
+
+        // Check empty fields
 
         if (!name || !review) {
 
@@ -120,6 +130,8 @@ if (reviewButton) {
 
         try {
 
+            // Save review to Firebase
+
             await addDoc(
                 collection(db, "reviews"),
                 {
@@ -131,8 +143,13 @@ if (reviewButton) {
             );
 
 
+            // Success message
+
             reviewMessage.textContent =
                 "Thank you! Your review has been submitted.";
+
+
+            // Clear form
 
             document.getElementById("review-name").value = "";
 
@@ -140,6 +157,8 @@ if (reviewButton) {
 
             document.getElementById("review-text").value = "";
 
+
+            // Reload reviews
 
             loadReviews();
 
@@ -165,9 +184,13 @@ if (reviewButton) {
 
 async function loadReviews() {
 
-    if (!reviewsContainer) return;
+    if (!reviewsContainer) {
+        return;
+    }
+
 
     reviewsContainer.innerHTML = "";
+
 
     try {
 
@@ -175,6 +198,7 @@ async function loadReviews() {
             collection(db, "reviews"),
             orderBy("createdAt", "desc")
         );
+
 
         const snapshot =
             await getDocs(reviewsQuery);
@@ -184,19 +208,33 @@ async function loadReviews() {
 
             const data = doc.data();
 
+
             const card =
                 document.createElement("div");
 
             card.className = "review-card";
 
+
             const stars =
                 "★".repeat(data.rating || 0);
 
+
             card.innerHTML = `
-                <div class="stars">${stars}</div>
-                <p>${data.review || ""}</p>
-                <h3>${data.name || "Customer"}</h3>
+
+                <div class="stars">
+                    ${stars}
+                </div>
+
+                <p>
+                    ${data.review || ""}
+                </p>
+
+                <h3>
+                    ${data.name || "Customer"}
+                </h3>
+
             `;
+
 
             reviewsContainer.appendChild(card);
 
@@ -206,13 +244,18 @@ async function loadReviews() {
 
     catch (error) {
 
-        console.error("Error loading reviews:", error);
+        console.error(
+            "Error loading reviews:",
+            error
+        );
 
     }
 
 }
 
 
-// Load reviews
+// =========================
+// LOAD REVIEWS WHEN PAGE OPENS
+// =========================
 
 loadReviews();
