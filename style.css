@@ -2146,4 +2146,277 @@ body {
     iframe {
         max-width: 100%;
     }
+}/* =========================================
+   FINAL MOBILE RESPONSIVE FIX
+========================================= */
+
+@media (max-width: 768px) {
+
+    html {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    /* प्रत्येक element screen मध्ये */
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* TEXT */
+
+    h1,
+    h2,
+    h3,
+    p,
+    span,
+    a {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .header {
+        width: 100%;
+        padding: 12px 15px;
+        overflow: hidden;
+    }
+
+    .navbar {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar a {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    .header-phones {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    /* =========================
+       HOME / HERO
+    ========================= */
+
+    .hero,
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px !important;
+        line-height: 1.15;
+        overflow-wrap: normal;
+    }
+
+    .hero-small,
+    .hero-yellow {
+        font-size: 17px !important;
+    }
+
+    .hero-info {
+        width: 100%;
+        max-width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .whatsapp-btn {
+        max-width: 100%;
+        white-space: normal;
+    }
+
+
+    /* =========================
+       ALL SECTIONS
+    ========================= */
+
+    section {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    section h2 {
+        font-size: 28px !important;
+    }
+
+
+    /* =========================
+       SERVICES
+    ========================= */
+
+    .service-container {
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: 1fr !important;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .features {
+        width: 100%;
+        grid-template-columns: 1fr !important;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .contact iframe {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+
+    /* =========================
+       BOOKING FORM
+    ========================= */
+
+    .booking-box {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #bookingForm {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #bookingForm input,
+    #bookingForm select,
+    #bookingForm textarea,
+    #bookingForm button {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* =========================
+       REVIEWS
+    ========================= */
+
+    .reviews-section {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .reviews-container {
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: 1fr !important;
+    }
+
+    .review-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .review-form {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .review-form input,
+    .review-form select,
+    .review-form textarea,
+    .review-form button {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        overflow: hidden;
+    }
+
+    footer p,
+    footer h3 {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+
+    /* =========================
+       FLOATING BUTTON
+    ========================= */
+
+    .floating-whatsapp {
+        right: 15px;
+        bottom: 20px;
+        max-width: none;
+    }
 }
