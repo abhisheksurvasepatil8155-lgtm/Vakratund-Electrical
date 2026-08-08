@@ -1088,4 +1088,664 @@ height: 85px !important;
     .service-card {
         min-height: auto;
     }
+}.header-phones {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.header-phones .call-btn {
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+
+    .header-phones {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .header-phones .call-btn {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+
+}.contact-btn.call {
+    background: #111827;
+    color: white;
+}/* =========================
+   HEADER - SMALLER & CLEAN
+========================= */
+
+.header {
+    min-height: 80px;
+}
+
+.header-phones {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.header-phones .call-btn {
+    font-size: 15px;
+    padding: 12px 18px;
+    min-width: 155px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    gap: 35px;
+}
+
+.navbar a {
+    font-size: 16px;
+}
+
+/* LOGO */
+
+.site-logo {
+    max-height: 65px;
+    width: auto;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .navbar {
+        gap: 15px;
+    }
+
+    .header-phones .call-btn {
+        font-size: 13px;
+        padding: 9px 12px;
+        min-width: auto;
+    }
+
+}/* =========================
+/* =====================================
+   PREMIUM CUSTOMER REVIEW FORM
+===================================== */
+
+.review-form {
+    width: 92%;
+    max-width: 540px;
+    margin: 45px auto;
+
+    padding: 35px;
+
+    background: rgba(255, 255, 255, 0.98);
+
+    border: 1px solid #e5e7eb;
+    border-radius: 22px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.10),
+        0 4px 12px rgba(0, 0, 0, 0.05);
+
+    box-sizing: border-box;
+
+    font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Yellow top line */
+
+.review-form::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background: #facc15;
+}
+
+
+/* Heading */
+
+.review-form h3 {
+    margin: 5px 0 28px;
+
+    text-align: center;
+
+    font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+
+    color: #111827;
+}
+
+
+/* Small heading underline */
+
+.review-form h3::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 3px;
+
+    margin: 10px auto 0;
+
+    background: #facc15;
+
+    border-radius: 10px;
+}
+
+
+/* =====================================
+   INPUTS
+===================================== */
+
+.review-form input,
+.review-form select,
+.review-form textarea {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 15px 16px;
+
+    margin-bottom: 17px;
+
+    border: 1px solid #d9dde3;
+
+    border-radius: 11px;
+
+    background: #f9fafb;
+
+    color: #111827;
+
+    font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 400;
+
+    outline: none;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* Placeholder */
+
+.review-form input::placeholder,
+.review-form textarea::placeholder {
+    color: #9ca3af;
+}
+
+
+/* Focus */
+
+.review-form input:focus,
+.review-form select:focus,
+.review-form textarea:focus {
+
+    background: #ffffff;
+
+    border-color: #facc15;
+
+    box-shadow:
+        0 0 0 3px rgba(250, 204, 21, 0.16);
+
+}
+
+
+/* Rating */
+
+.review-form select {
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    color: #f59e0b;
+}
+
+
+/* Textarea */
+
+.review-form textarea {
+
+    min-height: 125px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================
+   SUBMIT BUTTON
+===================================== */
+
+.review-form button {
+
+    width: 100%;
+
+    padding: 15px 20px;
+
+    margin-top: 3px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background: #facc15;
+
+    color: #111827;
+
+    font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.2px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 15px rgba(250, 204, 21, 0.25);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+/* Hover */
+
+.review-form button:hover {
+
+    background: #eab308;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 20px rgba(250, 204, 21, 0.30);
+}
+
+
+/* Click */
+
+.review-form button:active {
+
+    transform: translateY(0);
+
+}
+
+
+/* =====================================
+   SUCCESS / ERROR MESSAGE
+===================================== */
+
+#review-message {
+
+    margin: 16px 0 0;
+
+    text-align: center;
+
+    font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+    .review-form {
+
+        width: 94%;
+
+        padding: 27px 20px;
+
+        border-radius: 18px;
+
+        margin: 35px auto;
+    }
+
+    .review-form h3 {
+
+        font-size: 24px;
+
+        margin-bottom: 24px;
+    }
+
+    .review-form input,
+    .review-form select,
+    .review-form textarea {
+
+        padding: 13px 14px;
+
+        font-size: 14px;
+    }
+
+    .review-form button {
+
+        padding: 14px;
+
+        font-size: 15px;
+    }
+
+}/* =====================================
+   PREMIUM BOOK AN ELECTRICIAN FORM
+===================================== */
+
+.booking-box {
+    width: 100%;
+    max-width: 560px;
+
+    padding: 35px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 22px;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.10),
+        0 4px 12px rgba(0, 0, 0, 0.05);
+
+    font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Yellow top line */
+
+.booking-box::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background: #facc15;
+}
+
+
+/* Heading */
+
+.booking-box h3 {
+    margin: 5px 0 28px;
+
+    text-align: center;
+
+    font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+
+    color: #111827;
+}
+
+
+/* Yellow underline */
+
+.booking-box h3::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 3px;
+
+    margin: 10px auto 0;
+
+    background: #facc15;
+
+    border-radius: 10px;
+}
+
+
+/* =====================================
+   BOOKING FORM
+===================================== */
+
+#bookingForm {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+/* Inputs */
+
+#bookingForm input,
+#bookingForm select,
+#bookingForm textarea {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 15px 16px;
+
+    border: 1px solid #d9dde3;
+
+    border-radius: 11px;
+
+    background: #f9fafb;
+
+    color: #111827;
+
+    font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 400;
+
+    outline: none;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* Placeholder */
+
+#bookingForm input::placeholder,
+#bookingForm textarea::placeholder {
+
+    color: #9ca3af;
+}
+
+
+/* Focus effect */
+
+#bookingForm input:focus,
+#bookingForm select:focus,
+#bookingForm textarea:focus {
+
+    background: #ffffff;
+
+    border-color: #facc15;
+
+    box-shadow:
+        0 0 0 3px rgba(250, 204, 21, 0.16);
+
+}
+
+
+/* Service dropdown */
+
+#bookingForm select {
+
+    cursor: pointer;
+
+    color: #374151;
+
+    font-weight: 500;
+}
+
+
+/* Problem textarea */
+
+#bookingForm textarea {
+
+    min-height: 125px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================
+   WHATSAPP BOOKING BUTTON
+===================================== */
+
+#bookingForm button {
+
+    width: 100%;
+
+    padding: 15px 20px;
+
+    margin-top: 3px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background: #facc15;
+
+    color: #111827;
+
+    font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.2px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 15px rgba(250, 204, 21, 0.25);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+/* Hover */
+
+#bookingForm button:hover {
+
+    background: #eab308;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 20px rgba(250, 204, 21, 0.30);
+}
+
+
+/* Click */
+
+#bookingForm button:active {
+
+    transform: translateY(0);
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+    .booking-box {
+
+        width: 94%;
+
+        padding: 27px 20px;
+
+        border-radius: 18px;
+
+        margin: 0 auto;
+    }
+
+
+    .booking-box h3 {
+
+        font-size: 24px;
+
+        margin-bottom: 24px;
+    }
+
+
+    #bookingForm input,
+    #bookingForm select,
+    #bookingForm textarea {
+
+        padding: 13px 14px;
+
+        font-size: 14px;
+    }
+
+
+    #bookingForm button {
+
+        padding: 14px;
+
+        font-size: 15px;
+    }
+
 }

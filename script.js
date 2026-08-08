@@ -56,8 +56,7 @@ if (bookingForm) {
         const problem =
             document.getElementById("problem").value;
 
-        const electricianNumber = "917559110974";
-
+       
         const message =
 `⚡ New Electrician Booking
 
@@ -68,14 +67,22 @@ Problem: ${problem}
 
 Please contact the customer.`;
 
-        const whatsappURL =
-            "https://wa.me/" +
-            electricianNumber +
-            "?text=" +
-            encodeURIComponent(message);
+const electricianNumbers = [
+    "917559110974",
+    "918459264909"
+];
 
-        window.open(whatsappURL, "_blank");
+electricianNumbers.forEach(function(number) {
 
+    const whatsappURL =
+        "https://wa.me/" +
+        number +
+        "?text=" +
+        encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank");
+
+});
     });
 
 }
