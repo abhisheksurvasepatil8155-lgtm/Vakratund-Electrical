@@ -235,11 +235,10 @@ async function loadReviews() {
                 <p>
                     ${data.review || ""}
                 </p>
-
-                <h3>
-                    ${data.name || "Customer"}
-                </h3>
-
+<h3>
+    ${data.name || "Customer"}
+    <span class="verified-review">✓</span>
+</h3>
             `;
 
 
